@@ -1,0 +1,136 @@
+<?php
+//echo $this->form->setAction($this->url(array('controller'=>'register','action'=>'save')));
+//echo $this->form;
+?>
+<script language="javascript">
+function validate(){
+	if (document.Register.real_name.value ==""){
+		alert("Nama tidak boleh kosong");
+		document.Register.real_name.focus();
+		return false;
+	}
+	if (document.Register.email.value ==""){
+		alert("Contact tidak boleh kosong");
+		document.Register.email.focus();
+		return false;
+	}
+	if (document.Register.trading_name.value ==""){
+		alert("Trading Name tidak boleh kosong");
+		document.Register.trading_name.focus();
+		return false;
+	}
+	if (document.Register.description.value ==""){
+		alert("Sumber informasi diketahui dari.....");
+		document.Register.description.focus();
+		return false;
+	}
+	return true;
+}
+</script><body onLoad="document.Register.real_name.focus()" class="ss-base-body" >
+<div class="ss-form-container">
+<form id="form" name="Register" method="post" action="/register/save" onSubmit="return validate()" >
+<table width="580" border="0" >
+<tr><td colspan="2"><div class="ss-form-heading">Register Online</div></td></tr>
+
+      <tr>
+	  <tr><td> </td></tr>
+      <td width="125">Real Name*</td>
+      <td width="455"><label>
+        <input name="real_name" type="text" id="textfield" size="35" value="<?php echo @$this->values['realname'];?>"  /><span id="error_msg"></span>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><label>
+        <input name="address" type="text" id="textfield2" size="50" value="<?php echo @$this->values['address'];?>" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td><label>
+        <input type="text" name="city" id="textfield3" value="<?php echo @$this->values['city'];?>"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td><label>
+        <input type="text" name="state" id="textfield4" value="<?php echo @$this->values['state'];?>"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Post Code</td>
+      <td><label>
+        <input name="post_code" type="text" id="textfield5" size="15" value="<?php echo @$this->values['post_code'];?>"/>
+      </label></td>
+    </tr>
+  </table>
+  <p>
+  <table width="580" border="0" >
+    <tr>
+      <td width="125" height="29">Contact*</td>
+      <td width="455"><label>
+        <input name="email" type="text" id="textfield9" size="40"  value="<?php echo @$this->values['email'];?>" />
+        <select name="contact_type" id="select">
+        <option value="email">EMAIL</option>
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Phone1</td>
+      <td><label>
+      	<input name="phone1" type="text" id="textfield8" value="<?php echo @$this->values['phone1'];?>" />
+        <select name="phone_type0" id="contact_type">
+          <option value="office" selected>OFFICE</option>
+      </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Phone2</td>
+      <td><label>
+      	<input type="text" name="phone2" id="textfield7" value="<?php echo @$this->values['phone2'];?>"/>
+        <select name="phone_type1" id="contact_type2">
+        <option value="mobile">MOBILE</option>
+      </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Phone3</td>
+      <td><label>
+        <input type="text" name="phone3" id="textfield10"  value="<?php echo @$this->values['phone3'];?>"/>
+        <select name="phone_type2" id="phone_type">
+          <option value="fax">FAX</option>
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td width="111">Trading Name*</td>
+      <td width="165"><label>
+        <input type="text" name="trading_name" id="textfield11" size="30" value="<?php echo @$this->values['trading_name'];?>"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Kemitraan MMBC</td>
+      <td><select name="request">
+        <option value="Agen MMBC AM">Agen MMBC AM</option>
+        <option value="Cabang MMBC CM">Cabang MMBC CM</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td width="111">Info Dari*</td>
+      <td width="165"><label>
+        <input type="text" name="description" id="textfield12" size="25"  value="<?php echo @$this->values['desc'];?>" />
+      </label></td>
+    </tr>
+  </table>
+  <p>
+ <br>
+ <br>
+    <label>
+      <input type="submit" name="button" value="Kirim" />
+    </label>
+  </p>
+  <p>&nbsp;</p>
+  
+</form>
+</div>
+<?php echo $this->errorMessage; ?>

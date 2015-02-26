@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+body.ss-base-body {
+background: #65A5CF;
+color: black;
+margin: 0;
+padding: 0;
+}
+
+div.ss-form-container {
+background:url('//lh3.googleusercontent.com/ZeIcLJpSLKJjdcMHZpozYD9tenYwcUlXxyLuJe8h9vrJf6RZg-r3btR2OpTp_-wPWCqHso4c3KVLyhbsxlMBIuU=s0') no-repeat;
+margin: 0 15px;
+border: 0px;
+padding: 15px 50px 25px;
+width: 450px;
+margin-left:auto;
+margin-right:auto;
+}
+div {
+display: block;
+}
+.ss-form-heading{
+	color: white;
+font-size: 2.5em;
+}
+
+
+

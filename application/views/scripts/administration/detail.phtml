@@ -1,0 +1,66 @@
+<table width="301" border="0" style="border:solid;  text-decoration:inherit;">
+<?php $register = $this->register;
+//var_dump($x);exit; 
+//foreach($this->register as $register){ ?>
+	<tr>
+		<td width="116">Real Name</td>
+		<td width="47"><?php echo $this->escape($register->realname);?></td>
+		<td width="122">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Address</td>
+		<td><?php echo $this->escape($register->address);?></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td><?php echo $this->escape($register->city);?></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>State</td>
+		<td><?php echo $this->escape($register->state);?></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Post Address</td>
+		<td><?php echo $this->escape($register->postcode);?></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Contact</td>
+		<td></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Phone 1</td>
+		<td></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Phone 2</td>
+		<td><?php echo $this->escape($register->phone1);?></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Trading Name</td>
+		<td><?php echo $this->escape($register->tradingname);?></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+<?php //} ?>
+</table>
